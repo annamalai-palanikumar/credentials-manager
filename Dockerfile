@@ -3,9 +3,9 @@ COPY . /credentials-manager
 WORKDIR /credentials-manager
 RUN mvn clean install
 
-FROM openjdk as customjre
+FROM alpine as customjre
 RUN apk upgrade --available
-RUN apk add --no-cache ca-certificates java-cacerts openssl binutils
+RUN apk add --no-cache openjdk11-jre ca-certificates java-cacerts openssl binutils
 RUN jlink \
      --module-path /opt/java/jmods \
      --compress=2 \
