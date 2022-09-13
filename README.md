@@ -1,5 +1,4 @@
-1) Building Container to run application
-2) Base Application
-3) Authentication APIs
-4) Credential Management APIs
-5) SDKs for Credential Management and Authentication
+Contains Dockerfile to Build the Container to run this application
+Contains Authentication APIs to authenticate before accessing Credentials
+Contains Credential Management APIs which are core of the this application
+Contains SDKs for Credential Management and Authentication
