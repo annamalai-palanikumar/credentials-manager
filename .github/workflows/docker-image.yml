@@ -18,5 +18,6 @@ jobs:
       uses: actions/setup-java@v3.5.0
       with:
         java-version: 11
+        distribution: jdk
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag credentials-manager:$(date +%s)
