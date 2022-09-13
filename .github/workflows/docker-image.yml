@@ -21,3 +21,5 @@ jobs:
         distribution: microsoft
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag credentials-manager:$(date +%s)
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v3.1.1
