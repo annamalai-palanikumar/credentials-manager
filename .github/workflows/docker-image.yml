@@ -14,5 +14,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Setup Java JDK
+      uses: actions/setup-java@v3.5.0
+      with:
+        java-version: 11
+        distribution: microsoft
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag credentials-manager:$(date +%s)
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v3.1.1
